@@ -1,19 +1,13 @@
 
 import { Request, Response } from 'express';
-
-const OverwatchLeague = require('overwatchleague');
-const OWL = new OverwatchLeague();
-
+import * as OWL from 'overwatchleague';
 export class StandingsController{
 
-  
-
   public getStanding (req: Request, res: Response) {   
+    const owl: OWL = new OWL();
     
-    OWL.getStandings().then(response => {
-      console.log(response);
+    owl.getStandings().then(response => {
+      res.json(response.data);
     })
-    
-      
   }
 }
