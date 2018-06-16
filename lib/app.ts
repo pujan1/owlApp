@@ -1,6 +1,6 @@
 import * as express from "express";
 import * as bodyParser from "body-parser";
-import { Routes } from "./routes/owlRoutes";
+import { Routes } from "./routes/owl.routing";
 
 class App {
 
