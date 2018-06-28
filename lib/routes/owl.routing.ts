@@ -6,7 +6,7 @@ export class Routes {
     public routes(app): void {   
 
     app.route('/standings')
-        .get(this.standingsController.getStanding);
+        .get(this.standingsController.getStandings);
         
     }
 }

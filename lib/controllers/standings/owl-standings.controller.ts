@@ -1,14 +1,17 @@
-
-import { Observable } from 'rxjs';
 import { Request, Response } from 'express';
 import * as OWL from 'overwatchleague';
+import { OwlStandings } from './owl-standings.model'
 export class OwlStandingsController{
 
-  public getStanding (req: Request, res: Response) {   
+  public owlStandings: OwlStandings = new OwlStandings();
+
+  public getStandings (req: Request, res: Response) {   
     const owl: OWL = new OWL();
-    
+
     owl.getStandings().then(response => {
-      res.json(response.data);
+      res.json(this.owlStandings.fromJSON(response.data));
     })
+
+
   }
 }
