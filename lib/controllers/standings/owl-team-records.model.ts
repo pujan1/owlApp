@@ -1,9 +1,9 @@
 export type Wins = number;
 export type Loss = number;
 export type Draw = number;
-export type MapWins = number;
-export type MapLoss = number;
-export type MapDraw = number;
+export type GameWin = number;
+export type GameLoss = number;
+export type GameTie = number;
 export type MapDiff = number;
 
 export class OwlTeamRecords {
@@ -11,9 +11,9 @@ export class OwlTeamRecords {
   public wins: Wins;
   public Loss: Loss;
   public draw: Draw;
-  public mapWins: MapWins;
-  public mapLoss: MapLoss;
-  public mapDraw: MapDraw;
+  public gameWin: GameWin;
+  public gameLoss: GameLoss;
+  public gameTie: GameTie;
   public mapDiff: MapDiff
 
   public fromJSON(json): OwlTeamRecords {
@@ -23,9 +23,9 @@ export class OwlTeamRecords {
     records.wins = json.matchWin;
     records.Loss = json.matchLoss;
     records.draw = json.matchDraw;
-    records.mapWins = json.gameWin;
-    records.mapLoss = json.gameLoss;
-    records.mapDraw = json.gameTie;
+    records.gameWin = json.gameWin;
+    records.gameLoss = json.gameLoss;
+    records.gameTie = json.gameTie;
     records.mapDiff = json.comparisons[3].value;
     
     return records;
