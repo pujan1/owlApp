@@ -11,7 +11,5 @@ export class OwlStandingsController{
       const Standings = owlStandings.fromJSON(response.data)
       res.json(Standings);
     });
-
-
   }
 }
