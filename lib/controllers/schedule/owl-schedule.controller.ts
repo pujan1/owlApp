@@ -6,7 +6,7 @@ export class OwlScheduleController{
     const owl: OWL = new OWL();
 
     owl.getSchedule().then(response => {
-      res.json(response.data);
+      res.json(response.data.data.stages[1]);
     });
   }
 }
