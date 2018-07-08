@@ -1,6 +1,7 @@
 import { Request, Response } from 'express';
 import * as OWL from 'overwatchleague';
 import { OwlStandings } from './owl-standings.model'
+
 export class OwlStandingsController{
 
   public getStandings (req: Request, res: Response) {   
