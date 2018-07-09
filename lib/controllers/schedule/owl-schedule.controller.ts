@@ -12,7 +12,7 @@ export class OwlScheduleController{
       const schedule = owlStages.fromJSON(response.data.data.stages)
 
 
-      res.json(response.data.data);
+      res.json(schedule);
     });
   }
 }

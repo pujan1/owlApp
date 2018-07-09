@@ -1,5 +1,5 @@
 import { map } from 'lodash'
-import { OwlTeam } from "./owl-team.model";
+import { OwlTeam } from "../models/owl-team.model";
 
 export type Title = string;
 export class OwlStandings {
