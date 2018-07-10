@@ -17,6 +17,8 @@ export class OwlTeam {
 
   public fromJSON(json): OwlTeam {
 
+    console.log('jdfjdfjdf',json);
+
     const standing = new OwlTeam();
     const records = new OwlTeamRecords();
 
