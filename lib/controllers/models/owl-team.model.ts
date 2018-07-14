@@ -17,18 +17,15 @@ export class OwlTeam {
 
   public fromJSON(json): OwlTeam {
 
-    console.log('jdfjdfjdf',json);
-
     const standing = new OwlTeam();
     const records = new OwlTeamRecords();
 
-    standing.name = json.competitor.name;
-    standing.primaryColor = json.competitor.primaryColor;
-    standing.secondaryColor = json.competitor.secondaryColor;
-    standing.logo = json.competitor.logo;
-    standing.placement = json.placement;
-    standing.records = records.fromJSON(json.records[0]);
+    console.log('json', json);
 
+    standing.name = json.name;
+    standing.primaryColor = json.primaryColor;
+    standing.secondaryColor = json.secondaryColor;
+    standing.logo = json.logo;
 
     return standing;
 

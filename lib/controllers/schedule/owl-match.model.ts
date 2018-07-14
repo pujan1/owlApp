@@ -16,9 +16,6 @@ export class OwlMatch {
 
     const match = new OwlMatch();
     const team = new OwlTeam();
-
-
-    console.log('match', json.competitors[0]);
     
 
     match.title = 'jhskjdsjs';

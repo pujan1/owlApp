@@ -9,7 +9,7 @@ export class OwlStage {
 
   public title: Title;
   public slug: Slug;
-  public matches: OwlMatch[] = []
+  public matches: OwlMatch[] = [];
 
   public fromJSON(json): OwlStage {
 

@@ -1,19 +1,21 @@
 import { map } from 'lodash'
-import { OwlTeam } from "../models/owl-team.model";
+import { OwlTeamStanding } from "./owl-team-standing.model";
 
 export type Title = string;
 export class OwlStandings {
 
   public title: Title;
-  public overallStandings: OwlTeam[] = []
+  public overallStandings: OwlTeamStanding[] = []
 
   public fromJSON(json): OwlStandings {
 
     const standings = new OwlStandings();
-    const standing = new OwlTeam();
+    const teamStanding = new OwlTeamStanding();
+
+    console.log(json);
 
     standings.title = 'Standings';
-    standings.overallStandings = map(json.ranks, standing.fromJSON)
+    standings.overallStandings = map(json.ranks, teamStanding.fromJSON)
 
     return standings;
   }                    
