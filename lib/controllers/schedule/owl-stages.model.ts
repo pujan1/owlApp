@@ -5,14 +5,14 @@ export type Title = string;
 export class OwlStages {
 
   public title: Title;
-  public stages: OwlStage[] = []
+  public stages: any;
 
   public fromJSON(json): OwlStages {
 
     const owlStages = new OwlStages();
     const owlStage = new OwlStage();
 
-    owlStages.stages = map(json, owlStage.fromJSON);
+    owlStages.stages = map(json, owlStage.fromJSON) || 'unknown';
 
     return owlStages;
   }                    

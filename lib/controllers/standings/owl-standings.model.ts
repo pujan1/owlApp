@@ -12,8 +12,6 @@ export class OwlStandings {
     const standings = new OwlStandings();
     const teamStanding = new OwlTeamStanding();
 
-    console.log(json);
-
     standings.title = 'Standings';
     standings.overallStandings = map(json.ranks, teamStanding.fromJSON)
 

@@ -1,33 +1,30 @@
-import { OwlTeamRecords } from './owl-team-records.model'
 
+
+export type Id = number;
 export type Name = string;
 export type PrimaryColor = string;
 export type SecondaryColor = string;
 export type Logo = string;
-export type Placement = number
 
 export class OwlTeam {
 
+  public id: Id;
   public name: Name;
   public primaryColor: PrimaryColor;
   public secondaryColor: SecondaryColor;
   public logo: Logo;
-  public placement: Placement;
-  public records: any;
 
   public fromJSON(json): OwlTeam {
 
-    const standing = new OwlTeam();
-    const records = new OwlTeamRecords();
+    const team = new OwlTeam();
 
-    console.log('json', json);
+    team.id = json.id;
+    team.name = json.name;
+    team.primaryColor = json.primaryColor;
+    team.secondaryColor = json.secondaryColor;
+    team.logo = json.logo;
 
-    standing.name = json.name;
-    standing.primaryColor = json.primaryColor;
-    standing.secondaryColor = json.secondaryColor;
-    standing.logo = json.logo;
-
-    return standing;
+    return team;
 
   }
 }
