@@ -1,15 +1,18 @@
 import * as express from "express";
 import * as bodyParser from "body-parser";
+import * as mongoose from "mongoose";
 import { Routes } from "./routes/owl.routing";
 
 class App {
 
   public app: express.Application;
   public route: Routes = new Routes();
+  public mongoURL: string = 'mongodb://pujan:pujan123@ds249311.mlab.com:49311/owlapp'
 
   constructor() {
     this.app = express();
     this.config();  
+    this.mongoSetup();
     this.route.routes(this.app);      
   }
 
@@ -17,6 +20,11 @@ class App {
     this.app.use(bodyParser.json());
     this.app.use(bodyParser.urlencoded({ extended: false }));
   }
+
+  private mongoSetup(): void{
+    mongoose.Promise = global.Promise;
+    mongoose.connect(this.mongoURL);    
+}
 }
 
 export default new App().app;
