@@ -1,7 +1,8 @@
 import * as express from "express";
 import * as bodyParser from "body-parser";
-import * as mongoose from "mongoose";
 import { Routes } from "./routes/owl.routing";
+import { OwlMatchFetch } from "./controllers/models/owl-match-fetch.model";
+
 
 class App {
 
@@ -22,9 +23,7 @@ class App {
   }
 
   private mongoSetup(): void{
-    mongoose.Promise = global.Promise;
-    mongoose.connect(this.mongoURL);    
-}
+  }
 }
 
 export default new App().app;
