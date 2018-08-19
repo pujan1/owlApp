@@ -1,24 +1,14 @@
-import { MainComponent } from './main.component';
 import { NgModule } from '@angular/core';
-import { MainRoutingModule } from './main.routing';
-import { StandingsComponent } from '../standings/standings.component';
-import { ScheduleComponent } from '../schedule/schedule.component';
+import { CommonModule } from '@angular/common';
 
-
+import { MainRoutingModule } from './main-routing.module';
+import { MainComponent } from './main.component';
 
 @NgModule({
-  declarations: [
-    MainComponent,
-    StandingsComponent,
-    ScheduleComponent
-  ],
   imports: [
+    CommonModule,
     MainRoutingModule
   ],
+  declarations: [MainComponent]
 })
-
-export class MainModule {
-  constructor() {
-    console.log('djsdjsd');
-  }
-}
+export class MainModule { }

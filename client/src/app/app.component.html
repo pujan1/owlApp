@@ -1,3 +1,17 @@
-app com
+<h3>{{ title }}</h3>
+
+<nav class="navbar navbar-expand navbar-dark bg-dark">
+
+  <!-- Links -->
+  <ul class="navbar-nav">
+    <li class="nav-item">
+      <a routerLink="main/standings" routerLinkActive="active" class="nav-link" >Standing</a>
+    </li>
+    <li class="nav-item">
+      <a routerLink="main/schedule" routerLinkActive="active" class="nav-link" >Schedule</a>
+    </li>
+  </ul>
+</nav>
 
 <router-outlet></router-outlet>
+
