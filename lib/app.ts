@@ -1,20 +1,19 @@
 import * as express from "express";
 import * as bodyParser from "body-parser";
 import { Routes } from "./routes/owl.routing";
-import { OwlMatchFetch } from "./controllers/models/owl-match-fetch.model";
+import * as mysql from 'mysql';
 
 
 class App {
 
   public app: express.Application;
   public route: Routes = new Routes();
-  public mongoURL: string = 'mongodb://pujan:pujan123@ds249311.mlab.com:49311/owlapp'
 
   constructor() {
     this.app = express();
     this.config();  
-    this.mongoSetup();
-    this.route.routes(this.app);      
+    this.route.routes(this.app);
+    this.configureSQL();      
   }
 
   private config(): void{
@@ -22,7 +21,18 @@ class App {
     this.app.use(bodyParser.urlencoded({ extended: false }));
   }
 
-  private mongoSetup(): void{
+  private configureSQL(): void{
+    let connection = mysql.createConnection({
+      host: '35.226.98.99',
+      user: 'pujan',
+      database: 'owlapp',
+      password: 'pujan123'
+    });
+
+    connection.connect( (err) => {
+      if (err) console.error('Error connecting: ' + err.stack);
+      console.log('Connected as thread id: ' + connection.threadId);
+    });
   }
 }
 
