@@ -1,9 +1,5 @@
 import { Request, Response } from 'express';
-import * as ExtReq from 'request'
 import * as mongoose from "mongoose";
-import { MongoClient } from 'mongodb';
-
-
 
 export class OwlMatchStatsController {
 

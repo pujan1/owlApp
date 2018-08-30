@@ -1,8 +1,9 @@
 
-import { OwlStandingsController } from "controllers/standings/owl-standings.controller";
-import { OwlScheduleController } from "controllers/schedule/owl-schedule.controller";
-import { OwlMatchStatsController } from 'controllers/matchStats/owl-match-stats.controller'
-import { OwlPlayerStatsController } from "controllers/playerStats/owl-player-stats.controller";
+import { OwlStandingsController } from "../controllers/standings/owl-standings.controller";
+import { OwlScheduleController } from "../controllers/schedule/owl-schedule.controller";
+import { OwlMatchStatsController } from '../controllers/matchStats/owl-match-stats.controller'
+import { OwlPlayerStatsController } from "../controllers/playerStats/owl-player-stats.controller";
+import { OwlStatsController } from "../controllers/stats/owl-stats.controller";
 
 export class Routes {   
     
@@ -10,6 +11,7 @@ export class Routes {
     public scheduleController: OwlScheduleController = new OwlScheduleController();
     public matchStatsController: OwlMatchStatsController = new OwlMatchStatsController();
     public playerStatsController: OwlPlayerStatsController = new OwlPlayerStatsController();
+    public statsController: OwlStatsController = new OwlStatsController();
 
 
     public routes(app): void {   
@@ -27,7 +29,7 @@ export class Routes {
         .get(this.playerStatsController.getMatchStats)
     
     app.route('/stats/:type')
-        .get(this.playerStatsController.getMatchStats)
+        .get(this.statsController.getStats)
         
     }
 }

@@ -1,6 +1,6 @@
 import * as express from "express";
 import * as bodyParser from "body-parser";
-import { Routes } from "routes/owl.routing";
+import { Routes } from "./routes/owl.routing";
 import * as mysql from 'mysql';
 
 
@@ -13,7 +13,7 @@ class App {
     this.app = express();
     this.config();  
     this.route.routes(this.app);
-    this.configureSQL();      
+    //this.configureSQL();      
   }
 
   private config(): void{
