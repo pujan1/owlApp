@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { StandingsService } from './standings.service';
+
 
 @Component({
   selector: 'app-standings',
@@ -7,9 +9,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class StandingsComponent implements OnInit {
 
-  constructor() { }
+  public standings: any;
+
+  constructor(
+    private standingsService: StandingsService
+  ) { }
 
   ngOnInit() {
+    this.standings = this.standingsService.getStandings();
   }
 
 }
