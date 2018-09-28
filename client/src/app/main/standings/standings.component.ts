@@ -17,6 +17,7 @@ export class StandingsComponent implements OnInit {
 
   ngOnInit() {
     this.standings = this.standingsService.getStandings();
+    console.log(this.standings);
   }
 
 }
