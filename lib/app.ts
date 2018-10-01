@@ -12,29 +12,18 @@ class App {
   constructor() {
     this.app = express();
     this.config();  
-    this.route.routes(this.app);
-    //this.configureSQL();      
+    this.route.routes(this.app);    
   }
 
   private config(): void{
     this.app.use(bodyParser.json());
     this.app.use(bodyParser.urlencoded({ extended: false }));
     this.app.use(express.static(__dirname+'/dist'));
+    this.app.all('/*',  (req, res, next) => {
+      // Just send the index.html for other files to support HTML5Mode
+      res.sendFile('index.html', { root: __dirname+'/dist' });
+    });
   }
-
-  // private configureSQL(): void{
-  //   let connection = mysql.createConnection({
-  //     host: '35.226.98.99',
-  //     user: 'pujan',
-  //     database: 'owlapp',
-  //     password: 'pujan123'
-  //   });
-
-  //   connection.connect( (err) => {
-  //     if (err) console.error('Error connecting: ' + err.stack);
-  //     console.log('Connected as thread id: ' + connection.threadId);
-  //   });
-  // }
 }
 
 export default new App().app;

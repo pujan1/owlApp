@@ -35,6 +35,10 @@ export const routes: Routes = [
   {
     path: 'teams',
     loadChildren: 'app/main/teams/teams.module#TeamsModule'
+  },
+  {
+    path: '**',
+    redirectTo: '/standings',
   }
 ];
 

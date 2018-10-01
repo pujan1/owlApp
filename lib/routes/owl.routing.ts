@@ -16,19 +16,19 @@ export class Routes {
 
     public routes(app): void {   
 
-    app.route('/standings')
+    app.route('/api/standings')
         .get(this.standingsController.getStandings);
 
-    app.route('/schedule')
+    app.route('/api/schedule')
         .get(this.scheduleController.getSchedule);
 
-    app.route('/match/:id/:number')
+    app.route('/api/match/:id/:number')
         .get(this.matchStatsController.getMatchStats)
     
-    app.route('/player/:id')
+    app.route('/api/player/:id')
         .get(this.playerStatsController.getMatchStats)
     
-    app.route('/stats/:type')
+    app.route('/api/stats/:type')
         .get(this.statsController.getStats)
         
     }
