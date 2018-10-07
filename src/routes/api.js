@@ -1,48 +1,15 @@
-const express = require('express');
-const router = express.Router();
+import express from 'express';
+import standingsController from '../controllers/standings.controller';
+import schedulesController from '../controllers/schedules.controller';
+import playersController from '../controllers/players.controller';
+const routes = express();
 
 
-router.get('/standings', (req, res, next) => {
+routes.get('/', (req, res) => res.send('Invalid Endpoint'));
 
-    res.send('standings')
-
-});
-
-router.get('/schedule', (req, res, next) => {
-
-    res.send('schedule')
-
-});
-
-router.get('/players', (req, res, next) => {
-
-    res.send('players')
-
-});
-
-router.get('/live-match', (req, res, next) => {
-
-    res.send('live-match')
-
-});
-
-router.get('/news', (req, res, next) => {
-
-    res.send('news')
-
-});
-
-router.get('/teams', (req, res, next) => {
-
-    res.send('teams')
-
-});
-
-router.get('/stats', (req, res, next) => {
-
-    res.send('stats')
-
-});
+routes.get('/standings', standingsController.get);
+routes.get('/schedules', schedulesController.get);
+routes.get('/players/:id', playersController.get);
 
 
-module.exports = router;
+export default routes;

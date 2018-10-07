@@ -1,9 +1,9 @@
-const express = require('express');
-const path = require('path');
-const bodyParser =require('body-parser');
-const cors = require('cors');
-const morgan = require('morgan');
-const api = require('./routes/api');
+import express from 'express';
+import path from 'path';
+import bodyParser from 'body-parser';
+import cors from 'cors';
+import morgan from 'morgan';
+import routes from './routes/api'
 
 const app = express();
 const port = 3000;
@@ -11,9 +11,8 @@ const port = 3000;
 app.use(cors());
 app.use(morgan('dev'));
 app.use(bodyParser.json());
-app.use(express.static(path.join(__dirname, 'client')));
+app.use(express.static(path.join(__dirname, 'dist')));
 
-app.use('/api', api);
-app.get('/', (req, res) => res.send('Invalid Endpoint'));
-app.get('*', (req, res) => res.sendFile(path.join(__dirname, 'client/index.html')));
+app.use('/api', routes);
+app.get('*', (req, res) => res.sendFile(path.join(__dirname, 'dist/index.html')));
 app.listen(port, () => console.log('server running....'));

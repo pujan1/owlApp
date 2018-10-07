@@ -1,0 +1,293 @@
+{
+  "id": 1,
+  "slug": "stage1",
+  "enabled": true,
+  "name": "Stage 1",
+  "tournaments": [
+    {
+      "id": 3829,
+      "type": "OPEN_MATCHES"
+    },
+    {
+      "id": 3830,
+      "type": "PLAYOFFS"
+    }
+  ],
+  "matches": [
+    {
+      "id": 10223,
+      "competitors": [
+        {
+          "id": 4404,
+          "availableLanguages": [
+            "en",
+            "zh-tw",
+            "zh-cn",
+            "th",
+            "ko",
+            "ru",
+            "ja",
+            "pt"
+          ],
+          "handle": "san-francisco.3862",
+          "name": "San Francisco Shock",
+          "homeLocation": "San Francisco, CA",
+          "primaryColor": "fc4c02",
+          "secondaryColor": "75787b",
+          "game": "OVERWATCH",
+          "abbreviatedName": "SFS",
+          "addressCountry": "US",
+          "logo": "https://bnetcmsus-a.akamaihd.net/cms/page_media/YO24NN5KAOFL1508792362791.png",
+          "icon": "https://bnetcmsus-a.akamaihd.net/cms/template_resource/0SY7LHKHV86R1507822883113.svg",
+          "secondaryPhoto": "https://bnetcmsus-a.akamaihd.net/cms/template_resource/0SY7LHKHV86R1507822883113.svg",
+          "type": "TEAM"
+        },
+        {
+          "id": 4405,
+          "availableLanguages": [
+            "en",
+            "zh-cn",
+            "th",
+            "ko",
+            "ru",
+            "ja",
+            "zh-tw"
+          ],
+          "handle": "los-angeles-a.2779",
+          "name": "Los Angeles Valiant",
+          "homeLocation": "Los Angeles, CA",
+          "primaryColor": "4a7729",
+          "secondaryColor": "000000",
+          "game": "OVERWATCH",
+          "abbreviatedName": "VAL",
+          "addressCountry": "US",
+          "logo": "https://bnetcmsus-a.akamaihd.net/cms/page_media/0D8BNUWVZP6B1508792362890.PNG",
+          "icon": "https://bnetcmsus-a.akamaihd.net/cms/template_resource/L3U59GQVS1ZK1507822882879.svg",
+          "secondaryPhoto": "https://bnetcmsus-a.akamaihd.net/cms/template_resource/L3U59GQVS1ZK1507822882879.svg",
+          "type": "TEAM"
+        }
+      ],
+      "scores": [
+        {
+          "value": 0
+        },
+        {
+          "value": 4
+        }
+      ],
+      "conclusionValue": 4,
+      "conclusionStrategy": "MINIMUM",
+      "winner": {
+        "id": 4405,
+        "availableLanguages": [
+          "en",
+          "zh-cn",
+          "th",
+          "ko",
+          "ru",
+          "ja",
+          "zh-tw"
+        ],
+        "handle": "los-angeles-a.2779",
+        "name": "Los Angeles Valiant",
+        "homeLocation": "Los Angeles, CA",
+        "primaryColor": "4a7729",
+        "secondaryColor": "000000",
+        "game": "OVERWATCH",
+        "abbreviatedName": "VAL",
+        "addressCountry": "US",
+        "logo": "https://bnetcmsus-a.akamaihd.net/cms/page_media/0D8BNUWVZP6B1508792362890.PNG",
+        "icon": "https://bnetcmsus-a.akamaihd.net/cms/template_resource/L3U59GQVS1ZK1507822882879.svg",
+        "secondaryPhoto": "https://bnetcmsus-a.akamaihd.net/cms/template_resource/L3U59GQVS1ZK1507822882879.svg",
+        "type": "TEAM"
+      },
+      "state": "CONCLUDED",
+      "status": "CONCLUDED",
+      "statusReason": "NORMAL",
+      "attributes": {},
+      "games": [
+        {
+          "id": 5599,
+          "number": 1,
+          "points": [
+            2,
+            3
+          ],
+          "attributes": {
+            "instanceID": "05c00f0a34c30002:048e1a9160d100a2",
+            "map": "dorado",
+            "mapScore": {
+              "team1": 2,
+              "team2": 3
+            }
+          },
+          "attributesVersion": "0.1.0",
+          "state": "CONCLUDED",
+          "status": "CONCLUDED",
+          "statusReason": "NORMAL",
+          "stats": null,
+          "handle": "matchgame-16c1572c-493e-e04d-987a-28490c65bdbe"
+        },
+        {
+          "id": 5600,
+          "number": 2,
+          "points": [
+            3,
+            4
+          ],
+          "attributes": {
+            "instanceID": "05c00f0a34c30002:048f662cfc6800b3",
+            "map": "temple-of-anubis",
+            "mapScore": {
+              "team1": 3,
+              "team2": 4
+            }
+          },
+          "attributesVersion": "0.1.0",
+          "state": "CONCLUDED",
+          "status": "CONCLUDED",
+          "statusReason": "NORMAL",
+          "stats": null,
+          "handle": "matchgame-0396b37c-ef2f-b947-8409-996422538799"
+        },
+        {
+          "id": 5601,
+          "number": 3,
+          "points": [
+            1,
+            2
+          ],
+          "attributes": {
+            "instanceID": "05c00f0a34c30002:048fce9e880b00b4",
+            "map": "ilios",
+            "mapScore": {
+              "team1": 1,
+              "team2": 2
+            }
+          },
+          "attributesVersion": "0.1.0",
+          "state": "CONCLUDED",
+          "status": "CONCLUDED",
+          "statusReason": "NORMAL",
+          "stats": null,
+          "handle": "matchgame-1f41fdb6-fff8-3d43-a9c8-50f17bdf925d"
+        },
+        {
+          "id": 5602,
+          "number": 4,
+          "points": [
+            1,
+            2
+          ],
+          "attributes": {
+            "instanceID": "05c00f0a34c30002:049033993a3b00b6",
+            "map": "numbani",
+            "mapScore": {
+              "team1": 1,
+              "team2": 2
+            }
+          },
+          "attributesVersion": "0.1.0",
+          "state": "CONCLUDED",
+          "status": "CONCLUDED",
+          "statusReason": "NORMAL",
+          "stats": null,
+          "handle": "matchgame-3f205a3b-f52c-dc49-a344-0e6a29a241c0"
+        }
+      ],
+      "clientHints": [],
+      "bracket": {
+        "id": 2725,
+        "matchConclusionValue": 4,
+        "matchConclusionStrategy": "MINIMUM",
+        "winners": 3,
+        "teamSize": 6,
+        "repeatableMatchUps": 0,
+        "stage": {
+          "id": 4665,
+          "availableLanguages": [
+            "en"
+          ],
+          "title": "Stage 1",
+          "tournament": {
+            "id": 3829,
+            "availableLanguages": [
+              "en"
+            ],
+            "game": "OVERWATCH",
+            "location": "Burbank, CA USA",
+            "featured": false,
+            "draft": false,
+            "handle": "tournament-0a2a4847-48c8-9a47-81dd-e5de499dd64d",
+            "title": "Overwatch League - Stage 1",
+            "series": {
+              "id": 55
+            }
+          }
+        },
+        "type": "OPEN_MATCH",
+        "clientHints": [],
+        "advantageComparing": "AFTER_MATCH",
+        "thirdPlaceMatch": false,
+        "allowDraw": false
+      },
+      "dateCreated": 1507006990212,
+      "flags": [],
+      "handle": "match-532e23e8-83e8-ed4a-8dbc-c9ca36f4cc8d",
+      "startDate": "2018-01-11T00:00:00.000Z",
+      "endDate": "2018-01-11T02:00:00.000Z",
+      "showStartTime": true,
+      "showEndTime": true,
+      "startDateTS": 1515628800000,
+      "endDateTS": 1515636000000,
+      "youtubeId": "",
+      "wins": [
+        0,
+        4
+      ],
+      "ties": [
+        0,
+        0
+      ],
+      "losses": [
+        4,
+        0
+      ],
+      "videos": [
+        {
+          "name": 1,
+          "description": "",
+          "vodLink": "",
+          "youtubeId": "",
+          "thumbnailUrl": ""
+        },
+        {
+          "name": 2,
+          "description": "",
+          "vodLink": "",
+          "youtubeId": "",
+          "thumbnailUrl": ""
+        },
+        {
+          "name": 3,
+          "description": "",
+          "vodLink": "",
+          "youtubeId": "",
+          "thumbnailUrl": ""
+        },
+        {
+          "name": 4,
+          "description": "",
+          "vodLink": "",
+          "youtubeId": "",
+          "thumbnailUrl": ""
+        }
+      ],
+      "tournament": {
+        "id": 3829,
+        "type": "OPEN_MATCHES",
+        "location": "Burbank, CA USA"
+      }
+    }
+  ]
+}
