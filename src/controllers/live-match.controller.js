@@ -1,11 +1,11 @@
-const OverwatchLeague = require('overwatchleague');
+const OverwatchLeague = require("overwatchleague");
 const OWL = new OverwatchLeague();
-const playersController = {};
+const liveMatchController = {};
 
-playersController.get = (req, res) => {
+liveMatchController.get = (req, res) => {
   OWL.getLiveMatch().then(response => {
     res.json(response.data);
   });
 };
 
-export default playersController;
+export default liveMatchController;
