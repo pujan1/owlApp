@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { BrowserRouter, Route } from "react-router-dom";
+import { BrowserRouter, Route, Switch } from "react-router-dom";
 import Button from "@material-ui/core/Button";
 import Teams from "./teams";
 import Standings from "./standings";
@@ -9,11 +9,11 @@ class Main extends Component {
   render() {
     return (
       <BrowserRouter>
-        <div>
-          <Route path="/" component={Standings} exact />
+        <Switch>
           <Route path="/schedules" component={Schedules} />
           <Route path="/teams" component={Teams} />
-        </div>
+          <Route component={Standings} />
+        </Switch>
       </BrowserRouter>
     );
   }
