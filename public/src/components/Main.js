@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import { BrowserRouter, Route, Switch } from "react-router-dom";
-import Button from "@material-ui/core/Button";
 import Home from "./home";
 import Teams from "./teams";
 import Standings from "./standings";
