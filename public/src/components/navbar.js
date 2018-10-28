@@ -23,6 +23,7 @@ import PropTypes from "prop-types";
 import { withStyles } from "@material-ui/core/styles";
 import { AppBar, Tabs, Typography } from "@material-ui/core";
 import Tab from "@material-ui/core/Tab";
+import { Link } from "react-router-dom";
 
 function TabContainer(props) {
   return (
@@ -50,6 +51,7 @@ class SimpleTabs extends React.Component {
 
   handleChange = (event, value) => {
     this.setState({ value });
+    console.log(event.target);
   };
 
   render() {
@@ -65,9 +67,6 @@ class SimpleTabs extends React.Component {
             <Tab label="Item Three" />
           </Tabs>
         </AppBar>
-        {value === 0 && <TabContainer>Item One</TabContainer>}
-        {value === 1 && <TabContainer>Item Two</TabContainer>}
-        {value === 2 && <TabContainer>Item Three</TabContainer>}
       </div>
     );
   }
